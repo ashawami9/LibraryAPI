@@ -5,8 +5,9 @@ import java.util.Date;
 
 public class GenerateNewBook {
     public String generate() {
-        String uniqueISBN = getUniqueID().substring(0, (getUniqueID().length() / 2));
-        String uniqueAisle = getUniqueID().substring(getUniqueID().length() / 2);
+        String id = getUniqueID();
+        String uniqueISBN = id.substring(0, (getUniqueID().length() / 2));
+        String uniqueAisle = id.substring(getUniqueID().length() / 2);
         String newBook = "{\n" +
                 "    \"name\" : \"Use Mac\",\n" +
                 "    \"isbn\" : " + uniqueISBN + ",\n" +
